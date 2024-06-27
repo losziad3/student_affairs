@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8"/> 
+        <link rel="stylesheet" href="{% static 'css/bar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/search.css' %}">
+        <link rel="stylesheet" href="{% static 'css/update.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title> Delete </title>
+        
+    </head>
+    <body>
+        <div class="nav">
+            <ul> 
+                
+    
+                <!-- <img src="back-ground/icon.png" class="logo-imges" > -->
+    
+                <li>
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li> 
+                    <a href="{% url 'search' %}" >Search</a>
+                </li>
+                <li> 
+                    <a href="{% url 'add' %}">Add Student</a>
+                </li>
+                <li> 
+                    <a href="{% url 'edit' %}">Edit</a>
+                </li>
+
+                <li> 
+                    <a href="{% url 'about' %}" >About Us</a>
+                </li>
+            </ul> 
+        </div>
+
+        <div>
+            <form> 
+                <div class="one">
+                    <p class="f-paragraph">
+                        <strong>searching</strong>
+
+                    </p>
+        
+                    <div class="search-box">
+                        <input class="search-txt" type="text" name="" placeholder="Type to search">
+                        <a class="search-btn" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+       
+
+
+
+
+        
+
+
+        <form class="formatting">
+            <!-- <div>
+                <label>Search</label>
+                <input type="Search" value="" placeholder="Enter Student's ID"/>
+            </div>
+            <br> -->
+            <div>
+                <label>Name:</label>
+                <input type="TEXT" required placeholder="Enter Student Name..." /> 
+    
+            </div> 
+            <br>
+            <div>
+                <label>ID:</label>
+                <input type="TEXT" required  placeholder="Enter Student ID..."/> 
+
+            </div> 
+
+                <button type="button" onclick="alert('Are you sure for deleting this student!')" >Delete </button>
+                    <!-- <a href="update.html"> 
+                        <button type="button" > Update </button>
+                    </a> -->
+        </form>
+    </body>
+</html>

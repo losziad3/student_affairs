@@ -1,0 +1,139 @@
+.ss{
+    margin-top: -263px;
+    margin-right: 33px;
+    width: 184px; 
+    /* background-color: green;  */
+    background-image: url('/static/image/homepage/student.png');
+    background-size: 173px;
+    background-repeat: no-repeat;
+    height: 199px;     
+    object-fit: none;  
+    /* object-position: right ;   */
+    float: right ;
+  }
+
+  .images { /* gear*/
+    margin-top: -70px;
+    margin-right: 49px;
+    width: 180px; 
+     /* background-color: green;   */
+    background-image: url('/static/image/homepage/arrange.png');
+    background-size: 169px;
+    background-repeat: no-repeat;
+    height: 180px;  
+    object-fit: none;  
+    /* object-position: right ;   */
+    float:  right ;
+  }
+
+
+  .gear{
+    margin-top:-62px;
+    margin-right: 302px;
+    width: 134px; 
+     /* background-color: green;   */
+    background-image: url('/static/image/homepage/settings.png');
+    background-size: 133px;
+    background-repeat: no-repeat;
+    height: 133px;  
+    object-fit: none;  
+    /* object-position: right ;   */
+    float:  right ;
+
+  }
+
+  .chain1{
+    margin-top:-110px;
+    margin-right: -493px;
+    width: 128px; 
+     /* background-color: green;   */
+    background-image: url('/static/image/homepage/chainss.png');
+    background-size: 111px;
+    background-repeat: no-repeat;
+    height: 127px;  
+    border: 5px;   
+    object-fit: none;  
+    /* object-position: right ;   */
+    float:  right ;
+  }
+
+  .chain2{
+    margin-top:-109px;
+    margin-right: -258px;
+    width: 128px; 
+     /* background-color: green;   */
+    background-image: url('/static/image/homepage/chains-edit.png');
+    background-size: 111px;
+    background-repeat: no-repeat;
+    height: 127px;  
+    border: 5px;   
+    object-fit: none;  
+    /* object-position: right ;   */
+    float:  right ;
+
+  }
+
+
+    .content .background{
+      display: inline;
+      border:none ;
+      border-radius: 100%;
+      background-color: #a4b3a438;
+      margin-top: -176px;
+      margin-left: 36px;
+      width: 571px; 
+      height: 109px;
+      float: left; 
+  } 
+
+  .content p {
+      font-style: italic;
+      font-size : 100px;
+      color:#101010;
+      font-weight:120;
+      margin-top : 80px;
+      margin-left: 50px; 
+      width:596px;      
+  }
+
+  .description{
+    width: 500px;
+    height:100px ; 
+    margin-left: 50px; 
+  }
+
+
+  .description .onne , .twwo , .three{
+    color :#85709d; 
+  }
+  .description .onne{
+    font-size: 55px;  
+    font-weight: 50px;
+    margin-top : -50px;
+  }
+
+  .description .twwo{
+    font-size: 55px; 
+    font-weight: 50px;
+    margin-top : -50px;
+  }
+  .description .three{
+    font-size: 55px; 
+    font-weight: 50px;
+    margin-top : -50px;
+  }
+
+  body {
+    background-image: url('/static/image/homepage/home.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed; 
+  }
+
+  /* .content h2 {
+      font-style: italic;
+      color: #101010;
+      font-size :  90px;
+      margin-top : -80px;
+      padding-left: 50px;
+  } */

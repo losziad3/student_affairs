@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" /> 
+        <meta name="description" content="For managing Students info.. :) "/> 
+        <title>Add new student</title>
+        <link rel="stylesheet" href="{% static 'css/add.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bar.css' %}"> 
+    </head>
+    
+    <body> 
+        <div class="nav">
+            <ul> 
+                
+    
+                <!-- <img src="back-ground/icon.png" class="logo-imges" > -->
+    
+                <li>
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li> 
+                    <a href="{% url 'search' %}" >Search</a>
+                </li>
+                <li> 
+                    <a href="{% url 'add' %}">Add Student</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'list' %}">List Of Students</a>
+                </li> 
+                <li> 
+                    <a href="{% url 'about' %}" >About Us</a>
+                </li>
+            </ul> 
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="container">
+                <!-- <center id="text"> -->
+                <div class="logo">
+                    <!-- registeration form -->
+                    <div class="add">
+                        <h1 id="reg">Registration Form</h1>
+                    </div>
+        
+                    <!-- </center> -->
+                    <div class="img">
+                        <img src="{% static '/image/add/add.png' %}" height="170" width="200">
+                    </div>
+                </div>
+                <hr>
+
+            <div class="two_div">
+                <!-- must write name -->
+                <div>
+                    <label class="text">Name:</label>
+                    <br>
+                    <input id="name" class="2" name="name" type="text" value="" required placeholder="Enter your name">
+                </div>
+
+                <!-- birthday not required information -->
+                <div>
+                    <label class="text">Date of birth:</label>
+                    <br>
+                    <input id="date" class="2" type="date" name="date" value="" placeholder="Enter your birthday">
+                </div>
+            </div>
+            <br>
+
+            <div class="two_div">
+                <!-- must write id -->
+                <div>
+                    <label class="text">ID:</label>
+                    <br>
+                    <input id="id" class="2" type="text" value="" name="id" required placeholder="Enter your id">
+                </div>
+
+                <!-- must write your gpa -->
+                <div>
+                    <label class="text">GPA:</label>
+                    <br>
+                    <input id="gpa" class="2" type="number" name="gpa" value=""
+                    required placeholder="Enter your GPA" 
+                    min="0" max="4" step="0.1">
+                </div>
+            </div>
+            <br>
+
+            <div class="two_div">
+                <!-- must select your level from datalist -->
+                <div>
+                    <label class="text">Level:</label>
+                    <br>
+                    <select id="drop" name="level" class="2" required>
+                        <option value = "1">Level 1</option>
+                        <option value = "2">Level 2</option>
+                        <option value = "3">Level 3</option>
+                        <option value = "4">Level 4</option>
+                    </select>
+                </div>
+
+            </div>
+
+             <div class="two_div">
+                 <div>
+                    <label class="text" for="Departement">Departement:</label>
+                    <br>
+                    <select id="Departement" class="2" name="department">
+                        <option value="{{stu.department}}">{{stu.department}}</option>
+                        <option value="IS">IS</option>
+                        <option value="CS">CS</option>
+                        <option value="IT">IT</option>
+                        <option value="DS">DS</option>
+                        <option value="AI">AI</option>
+                    </select>
+                </div>
+             </div>
+            <br>
+
+            <div class="two_div">
+                <!-- must write it -->
+                <div>
+                    <label class="text">E-mail:</label>
+                    <br>
+                    <input id="email" name="email" class="2" type="email" value="" required placeholder="Enter your E-mail">
+                </div>
+
+                <!-- if you want, write it -->
+                <div>
+                    <label class="text">Phone Number:</label>
+                    <br>
+                    <input id="phone" name="phone" class="2" type="text" value="" placeholder="Enter your phone">
+                </div>
+            </div>
+            <br>
+         
+            <!-- gender not required information -->
+            <div class="gender">
+                <!-- <center> -->
+                    <label class="text">Gender:</label>
+                    <input id="male" name="Gender" type="radio" value="Male">
+                    <label class="text" for="male">Male</label>
+                    <input id="female" name="Gender" type="radio" value="Female">
+                    <label class="text" for="female">Female</label>
+                <!-- </center> -->
+            </div>
+            <br>
+
+            <!-- not required -->
+            <div class="status">
+                    <label class="text">Status:</label>
+                    <input id="active" name="status" type="radio" value="Active">
+                    <label class="text" for="active">Active</label>
+                    <input id="inactive" name="status" type="radio" value="Inactive">
+                    <label class="text" for="inactive">Inactive</label>
+                <!-- </center> -->
+            </div>
+           
+            <br>
+            <br>
+
+            <div class="button">
+                <input class="reset" type="reset">
+                <input class="submit" type="submit" onclick="Valid_Data();">
+            </div>
+        </form> 
+
+    </body>
+    </html>

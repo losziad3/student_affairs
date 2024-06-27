@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link rel="stylesheet" href="{% static 'css/bar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/about-us.css' %}">
+        <meta charset="UTF-8" /> 
+        <title>about-us</title>
+        
+    </head>
+    <body>
+        <div class="nav">
+            <ul> 
+                
+    
+                <!-- <img src="back-ground/icon.png" class="logo-imges" > -->
+    
+                <li>
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li> 
+                    <a href="{% url 'search' %}" >Search</a>
+                </li>
+                <li> 
+                    <a href="{% url 'add' %}">Add Student</a>
+                </li>
+                <li>
+                    <a href="{% url 'list' %}">List Of Students</a>
+                </li> 
+                <li> 
+                    <a href="{% url 'about' %}" >About Us</a>
+                </li>
+            </ul> 
+        </div>
+
+
+
+        <h1>Team Members</h1>
+        <div id="breakline">
+            <br>
+            <br>
+            <br>
+        </div>
+        <div>
+            <ol>
+                
+                <li>
+                    <u><strong>Leader</strong></u>
+                    <br> 
+                    Name: Ahmed Yasser Ahmed Meshref 
+                    <br> 
+                    ID : 20200061
+                    <br> 
+                    Section : S(1_2) 
+                    
+                </li>
+                <br> 
+
+                <li>
+                    Name : Hagar abdelnaeem Ahmed
+                    <br> 
+                    ID : 20200613
+                    <br> 
+                    Section : S(1-2) 
+                </li>   
+                <br>          
+                <li> 
+                    Name : abdullah raffat kurdi 
+                    <br> 
+                    ID : 20200848
+                    <br>
+                    Section : S(1_2) 
+                </li> 
+                <br> 
+
+                <li> 
+                    Name : yassmeen Ahmed mohamed Ahmed 
+                    <br> 
+                    ID : 20201236
+                    <br>
+                    Section : S(1_2)
+                </li> 
+                <br> 
+
+                <li> 
+                    Name : israa hitham ghreeb 
+                    <br> 
+                    ID : 20200077
+                    <br>
+                    Section : S(1_2)
+                </li> 
+                <br> 
+
+                
+                
+            </ol> 
+    </div>
+    </body> 
+</html>

@@ -1,0 +1,114 @@
+
+*{
+    font-style: italic;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgba(221 211 211 / 30%);
+}
+
+#pname{
+    font-size: 0.8cm;
+    background-position: 50%;
+    display: inline-block;
+    padding: 0.5em 0.2em 0.8em 0.5em;
+    font-style: italic;
+    margin-left: 37%;
+    margin-right: 37%;
+    
+    
+}  
+table{
+    
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    border: 1.5px solid black;
+    background-color: #d6a0a9ef;
+    border-radius: 1%;
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+th{
+
+
+    font-weight: bold;
+    text-align: center;
+    width: 1200px;
+    height: 50px;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 10%;
+
+}
+td{
+
+
+    font-weight: bold;
+    text-align: center;
+    width: 1200px;
+    height: 50px;
+    border: 1.5px solid black;
+    border-radius: 10%;
+
+}
+#Save {
+    background-color: rgb(228, 228, 197);
+    border-style: inherit;
+    font-size: 0.60em;
+    font-weight: 400;
+    color: black;
+    padding: 0.9375em 2.1875em;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    float: right;
+    transition: 0.7s ease;
+    margin: 5px;
+    top: 85%;
+    text-align: center;
+    height: 50px;
+    width: 100px;
+    margin-right: 350px;
+
+}
+#Search{
+    width: 300px;
+    height: 20px;
+}
+#ss{
+    width: 80px;
+}
+#s{
+    margin-left: 35%;
+     margin-right: 35%;
+}
+
+
+
+.btn{
+    background-color: #b07680ef;
+    border-color: black;
+    font-weight: bold;
+    color: rgb(0 0 0 / 72%);
+    padding: 8px 25px;
+    border-radius: 20px;
+    margin-top: 7.5px;
+    text-decoration: none;
+    
+}
+.btn a{
+    color: rgb(0 0 0 / 72%);
+
+    text-decoration:  none;
+
+}
+.btn:hover{
+    
+    transform: scale(1.1);
+    opacity: 0.9;
+}

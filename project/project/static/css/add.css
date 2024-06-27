@@ -1,0 +1,136 @@
+form{
+    background-color: #d6a0a9ef;
+border-radius: 25px;
+padding: 65px;
+margin: 80px  180px;
+text-align: left;
+font-family: 'IntegralCF','sans-serif';
+font-size: 16px;
+font-weight: bold;
+color: black;
+}
+
+hr 
+{
+  border: 1px solid white;	                    
+   margin-bottom: 25px;
+}
+
+.logo 
+{
+   display: flex;
+   grid-column-gap: 200px;
+}
+
+.text
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: black;
+    font: bold;
+}
+
+input[class="2"] 
+{
+     border-radius: 35px;
+     width: 170%;
+     padding: 15px;
+     margin: 10px 0px 10px 0;
+     border: none;
+     background: white;
+}
+
+input[type="date"]
+{
+     padding-right: 45px;
+}
+
+input[type="number"]
+{
+ padding-right: 24px;
+}
+
+#Departement
+{
+padding-right: 93px;
+}
+#drop {
+    padding-right:69px;
+}
+
+.status
+{
+display:inline-block;
+}
+
+select
+{
+ border-radius: 35px;
+     width: 200%;
+     padding: 15px;
+     margin: 10px 0px 10px 0;
+     border: none;
+     background: white;
+ padding-right: 90px;
+}
+
+.two_div 
+{
+     display: flex;
+     grid-column-gap: 300px;
+}
+
+div 
+{
+     padding: 10px 0px 10px 0px;
+}
+
+.submit , .reset 
+{
+    color: #fff;
+    background-color: #48464f;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease
+}
+
+.submit
+{
+margin-left:60px;
+}
+
+.reset
+{
+margin-left:480px;
+}
+
+.submit:hover , .reset:hover
+{
+    background-color: #616067;
+    transform: scale(1.1);
+}
+
+.add{
+    background-color: #4D4557;
+    border-radius: 15%;
+    text-align: center;
+    
+}
+
+body {
+    background-image: url('/static/image/search/search.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed; 
+  }
+
+.img{   
+margin-left: 37%;
+
+}

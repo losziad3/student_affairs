@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Active and Inactive</title>
+    <link rel="stylesheet" href="{% static 'css/bar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="{% static 'css/list.css' %}">
+</head>
+<body>
+    <div class="nav">
+        <ul> 
+            
+
+            <!-- <img src="back-ground/icon.png" class="logo-imges" > -->
+
+            <li>
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li> 
+                <a href="{% url 'search' %}" >Search</a>
+            </li>
+            <li> 
+                <a href="{% url 'add' %}">Add Student</a>
+            </li>
+
+            <li>
+                <a href="{% url 'list' %}">List Of Students</a>
+            </li> 
+
+            <li> 
+                <a href="{% url 'about' %}" >About Us</a>
+            </li>
+        </ul> 
+    </div>
+
+    <form> 
+        <div class="one">
+            <p class="f-paragraph">
+                <strong>List of Students</strong>
+            </p>
+            <p class="s-paragraph">Active Student...
+                <img src="{% static '/image/back-ground/check.png' %}" class="second-pic" >
+            </p>
+
+        </div>
+    </form>
+
+
+
+
+        <div id = "br space">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Id</th>
+
+            <th>Department</th>
+             <th>Level</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Gpa</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+             {% for student in stu %}
+            <tr>
+
+                <td>{{student.name}}</td>
+                <td>{{student.studentID}}</td>
+                <td>{{student.department}}</td>
+                <td>{{student.level}}</td>
+                <td>{{student.Email}}</td>
+                <td>{{student.date}}</td>
+                <td>{{student.GPA}}</td>
+                <td>{{student.phone}}</td>
+                <td>{{student.gender}}</td>
+                <td class="activate">{{student.status}}</td>
+                <td>
+                     <button class="btn"><a href="{% url 'edit' student.studentID%}">Edit</a></button>
+                     <button class="btn"><a href="{% url 'delete' student.studentID%}">Delete</a></button>
+
+                 </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+<br>
+
+    <script type="text/javascript" src="../ActiveandInactive.js">
+       
+    </script>
+</body>
+</html>

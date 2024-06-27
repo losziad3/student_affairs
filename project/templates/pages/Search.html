@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Searching</title>
+    <link rel="stylesheet" href="{% static 'css/bar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/list.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/search.css' %}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+
+<body>
+
+    <!-- navbar  -->
+    <div class="nav">
+        <ul> 
+            
+
+            <!-- <img src="back-ground/icon.png" class="logo-imges" > -->
+
+            <li>
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li> 
+                <a href="{% url 'search' %}" >Search</a>
+            </li>
+            <li> 
+                <a href="{% url 'add' %}">Add Student</a>
+            </li>
+
+            <li>
+                <a href="{% url 'list' %}">List Of Students</a>
+            </li> 
+            <li> 
+                <a href="{% url 'about' %}" >About Us</a>
+            </li>
+        </ul> 
+    </div>
+
+    <div class="imges">
+        
+    </div>
+        <div class="one">
+            <p class="f-paragraph">
+                <strong>Searching</strong>
+                <img src="{% static '/image/back-ground/searching.png' %}"  class="search-pic"> 
+            </p>
+            <p class="s-paragraph">Active Student...
+                <img src="{% static '/image/back-ground/check.png' %}" class="second-pic" >
+            </p>
+
+            <div class="search-box">
+                <input class="search-txt" type="text" name="id" placeholder="Search By ID">
+            </div>
+        </div>
+
+        <table>
+
+        </table>
+        <script>
+
+let  Search = document.querySelector(".search-txt")
+let  Button = document.querySelector(".search_btn")
+let  Table  = document.querySelector("table");
+
+
+Search.addEventListener("keyup" , ()=>{
+
+    if(Search.value != ""){
+        id = Search.value;
+        req = new XMLHttpRequest();
+        req.onreadystatechange= ()=>{
+              if(req.readyState == 4 && req.status == 200 ){
+                 if(req.response!=""){
+                       let content_table = "<tr id ='head_tr'><th>Name</th><th>ID</th><th>Department</th><th>Email</th><th>GPA</th><th>Phone</th><th>Date of Birth</th><th>Level</th><th>Gender</th><th>Status</th><th>Edit</th></tr>";
+
+                       let data = JSON.parse(req.response);
+                       data.forEach((student)=>{
+                            content_table+=`
+                                      <tr>
+                                      <td>${student.name}</td>
+                                      <td>${student.studentID}</td>
+                                      <td>${student.department}</td>
+                                      <td>${student.Email}</td>
+                                      <td>${student.GPA}</td>
+                                      <td>${student.phone}</td>
+                                      <td>${student.date}</td>
+                                      <td>${student.level}</td>
+                                      <td>${student.gender}</td>
+                                      <td>${student.status}</td>
+                                      <td>
+                                         <button class="btn"><a href="edit/${student.studentID}">Edit</a></button>
+                                         <button class="btn"><a href="delete/${student.studentID}">Delete</a></button>
+
+                                      </td>
+                                  </tr>
+                            `;
+                              Table.innerHTML = content_table;
+                       });
+
+                 }else{
+                      Table.innerHTML = "No Results";
+                  }
+
+              }
+        };
+        req.open("GET",'searchajax?id='+id);
+        req.send();
+    }else{
+          Table.innerHTML = "";
+
+    }
+});
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+</body>
+
+</html>

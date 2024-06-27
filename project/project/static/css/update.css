@@ -1,0 +1,78 @@
+body{
+    background-color: rgba(221 211 211 / 30%);
+    background-image: url("/static/image/update/update.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed; 
+}
+.type{
+    margin-top: 78px;
+    text-align: center;
+    color: rgb(0 0 0 / 72%)
+}
+hr{
+    margin:0px 360px
+}
+.formatting{
+    background-color: #d8a122;
+    border-radius: 25px;
+    padding: 85px;
+    margin: 70px 180px;
+    text-align: left;
+    font-family: 'IntegralCF','sans-serif';
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0 0 0 / 72%);
+    background-image: url("/static/image/edit/checkout1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    /* background-position: 99% 50%; */
+    background-position: 473px 6px;
+    background-size: 494px 714px; 
+    background-repeat: no-repeat;
+}
+input{
+    border-radius: 20px;
+    border: 1px; 
+    padding: 5px 20px;
+    margin-left: 5px;
+    outline-color: lightblue;
+}
+input[type = submit], input[type = reset] {
+    background-color: whitesmoke;
+    border: 2px solid #92b7a0ef;
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(0 0 0 / 72%);
+    padding: 8px 20px;
+    cursor: pointer
+ }
+ input[type = submit]:hover, input[type = reset]:hover{
+    transform: scale(1.1);
+ }
+ input[type = reset]{
+     padding: 8px 23px;
+ }
+ input[type = radio]{
+    cursor: pointer
+ }
+ button{
+    background-color: whitesmoke;
+    font-weight: bold;
+    color: rgb(0 0 0 / 72%);
+    padding: 8px 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid #92b7a0ef;
+    margin-top: 7.5px;
+ }
+button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+#dep{
+    outline-color: white;
+ }
+div{
+     margin-bottom: 10px;
+}

@@ -1,0 +1,172 @@
+ {% load static %}
+ <!DOCTYPE html> 
+ <html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{% static 'css/bar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/search.css' %}">
+        <link rel="stylesheet" href="{% static 'css/update.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Update</title> 
+
+    </head>
+    <body>
+
+        <script>
+            function Valid_Data() {
+                // Name Validation
+                var regName = /^[a-zA-Z]/;
+                var name = document.getElementById("name").value;
+                if (!regName.test(name)) {
+                    alert("Invalid Name..!!\n Must contain characters only.");
+                }
+                //ID Validation
+                var id= document.getElementById("id").value;
+                if(id.length <8 || id.length>8){
+                    alert("Invalid ID.");
+                }
+                //Phone number validation
+                var phoneNum =  /^\d{11}$/;
+                var phone = document.getElementById("phone").value;
+                if(!phoneNum.test(phone)) {
+                    alert("Invalid Phone Number!!");
+                }
+            }
+        </script>
+ <div class="nav">
+    <ul> 
+        
+
+        <!-- <img src="back-ground/icon.png" class="logo-imges" > -->
+
+        <li>
+            <a href="{% url 'index' %}">Home</a>
+        </li>
+        <li> 
+            <a href="{% url 'search' %}" >Search</a>
+        </li>
+        <li> 
+            <a href="{% url 'add' %}">Add Student</a>
+        </li>
+        <li>
+            <a href="{% url 'list' %}">List Of Students</a>
+        </li> 
+        <li> 
+            <a href="{% url 'about' %}" >About Us</a>
+        </li>
+    </ul> 
+</div>
+
+        <div>
+            <form> 
+                <div class="one">
+                    <p class="f-paragraph">
+                        <strong>searching</strong>
+                        <img src="{% static '/image/back-ground/searching.png' %}"  class="search-pic"> 
+                    </p>
+                    <p class="s-paragraph">Active Student...
+                        <img src="{% static '/image/back-ground/check.png' %}" class="second-pic" >
+                    </p>
+                    
+                    <div class="search-box">
+                        <input class="search-txt" type="text" name="" placeholder="Type to search">
+                        <a class="search-btn" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+       
+            
+
+        <h1 class="type"> UPDATING DATA</h1>
+        <hr/> 
+
+            <!-- <img id="img" src="../images/update/updateform.jpg" height="500" width="500"> -->
+
+        <form class="formatting">
+ 
+            <div>
+                <label>Name:</label>
+                <input id ="name" type="TEXT" value ="" required placeholder="Enter your name" /> 
+    
+            </div> 
+            <br>
+            <div>
+                <label>ID:</label>
+                <input id = "id" type="TEXT" value ="" required  placeholder="Enter your ID"/> 
+
+            </div> 
+            <br>
+            <div>
+                <label> Date of Birth:</label>
+                <input type="date" required  /> 
+    
+            </div>
+            <br>
+
+            <div>
+                <label>GPA:</label>
+                <input type="TEXT" placeholder="Enter your GPA" min="0" max="4" step="0.1"/> 
+    
+            </div>
+            <br>
+                <!--<label>Level</label>  &nbsp;&nbsp;&nbsp;&nbsp; -->
+            <div>
+                <label>Level:</label>
+                <input name="Level" list="Levels" required  placeholder="Select your Level">
+                <datalist id="Levels">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">    
+                </datalist>
+            </div>
+            <br>
+            <div>
+                <label> Gender: </label>
+                <!--<input type="text" required placeholder="Male or Female"> -->
+                <input id="male"  type="radio" name= "gender"value="male"/> 
+                <label for="male">Male</label>
+        
+                <input id="female" type="radio" name="gender" value="female"/>
+                <label for="female"> female</label>
+            </div>
+            <br>
+            <div>
+                <label> Status:</label> 
+                <!--<input type="text"  required placeholder="active or inactive" > -->
+                <input id="ac" type="radio" name= "status"value="active"/> 
+                <label for="ac"> active</bel>
+            
+
+                <input id="inac" type="radio" name="status" value="inactive"/>
+                <label for="inac"> inactive</label>    
+            </div>
+            <br>
+            <div>
+                <label>E-mail: </label>
+                <input type="email" required placeholder="Enter a valid E-mail" > 
+    
+            </div>
+            <br>
+            <div>
+                <label>Phone Number:</label>
+                <input id = "phone" type="TEXT" required placeholder="Enter your number"> 
+    
+            </div>
+            <br>
+            <div>
+                <label>Department: </label>
+                <input id ="dep" type="text" required readonly >
+    
+            </div> 
+            <br>
+            <input type="reset" value="Reset">
+            <input type="submit" value ="Update" onclick="Valid_Data();">
+            
+        </form> 
+    </body>
+</html>

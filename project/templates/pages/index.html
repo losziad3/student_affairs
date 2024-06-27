@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" /> 
+        <meta name="description" content="For managing Students info.. :) "/> 
+        <title>S-WareHouse</title>
+        <link rel="stylesheet" href="{% static 'css/homepage.css' %}">  
+        <link rel="stylesheet" href="{% static 'css/bar.css' %}"> 
+    </head>
+    
+    <body> 
+        <div class="nav">
+            <ul> 
+                
+    
+                <!-- <img src="back-ground/icon.png" class="logo-imges" > -->
+    
+                <li>
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li> 
+                    <a href="{% url 'search' %}" >Search</a>
+                </li>
+                <li> 
+                    <a href="{% url 'add' %}">Add Student</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'list' %}">List Of Students</a>
+                </li> 
+                <li> 
+                    <a href="{% url 'about' %}" >About Us</a>
+                </li>
+            </ul> 
+        </div>
+
+        <!-- content  -->
+        <div class="content">
+            <p style="color: #7c7487;"> 
+                S-WareHouse
+            </p>
+           <div class="background"></div>
+        </div>
+        <div class="description">
+            <P class="onne">
+                For 
+            </P>
+            <p class="twwo">Managing</p>
+            <P class="three">Student Info</p>
+        </div>
+        
+             <div class="images"></div>
+             <div class="ss"></div>
+             <div class="gear"></div>
+            <div class="chain1"></div>
+            <div class="chain2"></div>
+
+    </body> 
+</html>
